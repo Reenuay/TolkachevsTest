@@ -1,40 +1,11 @@
 module Main exposing (main)
 
 import Browser
-import Element
-    exposing
-        ( Element
-        , centerX
-        , centerY
-        , column
-        , fill
-        , focusStyle
-        , height
-        , layoutWith
-        , row
-        , text
-        , width
-        )
+import Element exposing (focusStyle, layoutWith)
 import Element.Font as Font
-import Element.Input as Input
 import Html exposing (Html)
+import Pages.Home as HomePage
 import Resource
-
-
-mainPage : Element ()
-mainPage =
-    row
-        [ width fill
-        , height fill
-        ]
-        [ column [ centerX, centerY ]
-            [ text "Тест Толкачёва"
-            , Input.button []
-                { onPress = Just ()
-                , label = text "Начать"
-                }
-            ]
-        ]
 
 
 view : () -> Html ()
@@ -53,7 +24,7 @@ view () =
         , Resource.mainFont
         , Font.light
         ]
-        mainPage
+        HomePage.view
 
 
 update : () -> () -> ()

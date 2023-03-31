@@ -1,6 +1,6 @@
-module Resource exposing (mainBackgroundColor, mainFont, mainFontColor)
+module Resource exposing (accentColor, mainBackgroundColor, mainFont, mainFontColor)
 
-import Element exposing (Attribute, rgb255)
+import Element exposing (Attribute, Color, rgb255)
 import Element.Background as Background
 import Element.Font as Font
 
@@ -19,6 +19,11 @@ mainFontColor : Attribute msg
 mainFontColor =
     rgb255 45 45 42
         |> Font.color
+
+
+accentColor : Color
+accentColor =
+    rgb255 193 73 83
 
 
 
